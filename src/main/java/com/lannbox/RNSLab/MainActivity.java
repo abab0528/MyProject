@@ -280,136 +280,17 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
             }
         });
 
-        sendZeroButton = (Button) findViewById(R.id.sendZero);
-        sendZeroButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rfduinoService.send(new byte[]{0});
-            }
-        });
-
-        sendValueButton = (Button) findViewById(R.id.sendValue);
-        sendValueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v1) {
-                EditText editText1 = (EditText) findViewById(R.id.editText1) ;
-                String strText1 = editText1.getText().toString();
-                //EditText editText2 = (EditText) findViewById(R.id.editText2) ;
-                //String strText2 = editText2.getText().toString() ;
-                //EditText editText3 = (EditText) findViewById(R.id.editText3) ;
-                //String strText3 = editText3.getText().toString() ;
-                //EditText editText4 = (EditText) findViewById(R.id.editText4) ;
-                //String strText4 = editText4.getText().toString() ;
-                //EditText editText5 = (EditText) findViewById(R.id.editText5) ;
-                //String strText5 = editText5.getText().toString() ;
-                //String strText6 = strText1 +' '+ strText2+ ' '+ strText3 +' '+ strText4+ ' '+ strText5;
-                //final byte[] bytes = strText6.getBytes();
-                final byte[] bytes = strText1.getBytes();
-                rfduinoService.send(bytes);
-            }
-        });
-
-        modeText = (TextView)findViewById(R.id.textView9);
-
-        modeBtn1 = (Button) findViewById(R.id.btn1);
-        modeBtn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v1) {
-                rfduinoService.send(new byte[]{'0'});
-                //modeText.setText("MODE0");
-                dataLayout.removeAllViews();
-            }
-        });
-
-        modeBtn2 = (Button) findViewById(R.id.btn2);
-        modeBtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v1){
-                rfduinoService.send(new byte[]{'1'});
-                //modeText.setText("MODE1");
-                dataLayout.removeAllViews();
-            }
-        });
-
-        modeBtn3 = (Button) findViewById(R.id.btn3);
-        modeBtn3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v1){
-                rfduinoService.send(new byte[]{'2'});
-                //modeText.setText("MODE2");
-                dataLayout.removeAllViews();
-            }
-        });
-
-        modeBtn4 = (Button) findViewById(R.id.btn4);
-        modeBtn4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v1){
-                rfduinoService.send(new byte[]{'3'});
-                //modeText.setText("MODE3");
-                dataLayout.removeAllViews();
-            }
-        });
-
-        final ToggleButton tb=(ToggleButton)findViewById(R.id.toggleButton8);
-        tb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(tb.isChecked()){
-                    LinearLayout layout1 = (LinearLayout) findViewById(R.id.layout1);
-                    layout1.setVisibility(View.VISIBLE);
-                    LinearLayout layout1_ = (LinearLayout) findViewById(R.id.layout1_);
-                    layout1_.setVisibility(View.VISIBLE);
-                    LinearLayout layout2 = (LinearLayout) findViewById(R.id.layout2);
-                    layout2.setVisibility(View.VISIBLE);
-                    LinearLayout layout2_ = (LinearLayout) findViewById(R.id.layout2_);
-                    layout2_.setVisibility(View.VISIBLE);
-                }
-                else{
-                    LinearLayout layout1 = (LinearLayout) findViewById(R.id.layout1);
-                    layout1.setVisibility(View.GONE);
-                    LinearLayout layout1_ = (LinearLayout) findViewById(R.id.layout1_);
-                    layout1_.setVisibility(View.GONE);
-                    LinearLayout layout2 = (LinearLayout) findViewById(R.id.layout2);
-                    layout2.setVisibility(View.GONE);
-                    LinearLayout layout2_ = (LinearLayout) findViewById(R.id.layout2_);
-                    layout2_.setVisibility(View.GONE);
-                }
-            }
 
 
 
-        });
-
-        // Receive
 
 
-        dataLayout = (LinearLayout) findViewById(R.id.dataLayout);
 
 
-        final ToggleButton tb1=(ToggleButton)findViewById(R.id.toggleButton9);
-        tb1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(tb1.isChecked()){
-                    //RelativeLayout layout2 = (RelativeLayout) findViewById(R.id.layout2);
-                    //layout2.setVisibility(View.VISIBLE);
-                    LinearLayout layout3 = (LinearLayout) findViewById(R.id.layout3);
-                    layout3.setVisibility(View.VISIBLE);
-                    LinearLayout layout4 = (LinearLayout) findViewById(R.id.layout4);
-                    layout4.setVisibility(View.VISIBLE);
-                    dataLayout.setVisibility(View.VISIBLE);
-                }
-                else{
-                    //RelativeLayout layout2 = (RelativeLayout) findViewById(R.id.layout2);
-                    //layout2.setVisibility(View.GONE);
-                    LinearLayout layout3 = (LinearLayout) findViewById(R.id.layout3);
-                    layout3.setVisibility(View.GONE);
-                    LinearLayout layout4 = (LinearLayout) findViewById(R.id.layout4);
-                    layout4.setVisibility(View.GONE);
-                    dataLayout.setVisibility(View.GONE);
-                }
-            }});
+
+
+
+
         /*
         final ToggleButton tb2=(ToggleButton)findViewById(R.id.toggleButton7);
         tb2.setOnClickListener(new View.OnClickListener() {
@@ -444,13 +325,7 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
             }});
             */
 
-        clearButton = (Button) findViewById(R.id.clearData);
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                dataLayout.removeAllViews();
-            }
-        });
+
 
     }
     /*

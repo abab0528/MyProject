@@ -22,8 +22,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="RNSLab"
+        android:icon="@drawable/firstarlogo"
+        android:label="FIRSTAR"
         android:theme="@style/AppTheme">
         <activity
             android:name="com.lannbox.RNSLab.MainActivity"
@@ -42,7 +42,10 @@
             android:label="@string/title_activity_sub" />
         <activity
             android:name="com.lannbox.RNSLab.DActivity"
-            android:label="@string/title_activity_d"></activity>
+            android:label="@string/title_activity_sub"></activity>
+        <activity
+            android:name="com.lannbox.RNSLab.Sensor"
+            android:label="@string/title_activity_sub"></activity>
     </application>
 
 </manifest>
