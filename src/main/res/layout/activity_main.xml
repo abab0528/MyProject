@@ -21,7 +21,7 @@
         android:baselineAligned="true">
 
         <TextView
-            style="?android:attr/listSeparatorTextViewStyle"
+            style="android:attr/listSeparatorTextViewStyle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
@@ -37,7 +37,7 @@
             android:focusableInTouchMode="true" />
 
         <TextView
-            style="?android:attr/listSeparatorTextViewStyle"
+            style="android:attr/listSeparatorTextViewStyle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
@@ -59,7 +59,7 @@
             android:enabled="false" />
 
         <TextView
-            style="?android:attr/listSeparatorTextViewStyle"
+            style="android:attr/listSeparatorTextViewStyle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
@@ -73,7 +73,7 @@
             android:id="@+id/deviceInfo" />
 
         <TextView
-            style="?android:attr/listSeparatorTextViewStyle"
+            style="android:attr/listSeparatorTextViewStyle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
@@ -123,10 +123,22 @@
         <Button
             android:id="@+id/disconnect"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:enabled="false"
             android:text="Disconnect" />
 
+
+        <Button
+            android:id="@+id/sensor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sensor" />
+
+        <Button
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Graph" />
 
     </LinearLayout>
 </LinearLayout>
